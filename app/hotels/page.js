@@ -13,7 +13,7 @@ export default async function Page() {
   return (
     <main>
       <Header />
-      <div class="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         {data.map((hotel) => (
           <HotelBlock
             key={hotel.id}
@@ -23,7 +23,6 @@ export default async function Page() {
             skiIn={hotel.skiIn}
             pool={hotel.pool}
             spa={hotel.spa}
-            image={hotel.image}
           />
         ))}
       </div>

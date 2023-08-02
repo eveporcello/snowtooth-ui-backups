@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 
-export default async function HotelBlock({
+export default function HotelBlock({
   id,
   name,
   capacity,
   skiIn,
   pool,
-  spa,
+  spa
 }) {
   const imageLoader = ({ src }) => {
     return `./hotels/${src}.jpeg`;
