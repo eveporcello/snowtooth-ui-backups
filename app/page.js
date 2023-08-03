@@ -4,13 +4,11 @@ import { cookies } from "next/headers";
 
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
-  const { data: counter } = await supabase
-    .from("counter")
-    .select();
+  const { data } = await supabase.from("counter").select();
   return (
     <>
       <Header />
-      <p>{JSON.stringify(counter)}</p>
+      <p>{JSON.stringify(data)}</p>
       <div className="bg-hero-image bg-cover bg-center h-screen flex items-center justify-center">
         <div>
           <h1 className="text-7xl font-bold text-white mb-6 bg-slate-600">
